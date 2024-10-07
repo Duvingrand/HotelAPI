@@ -11,6 +11,7 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Controllers.V1.Guests;
 [Route("api/v1/guests")]
 [ApiExplorerSettings(GroupName = "v1")]
 [Tags("guests")]
+
 public class GuestsDeleteController(IGuestRepository guestRepository) : GuestsController(guestRepository)
 {
     [HttpDelete("{id}")]

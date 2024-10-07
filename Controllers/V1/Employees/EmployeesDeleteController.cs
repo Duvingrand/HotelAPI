@@ -11,6 +11,7 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Controllers.V1.Employees;
 [Route("api/v1/employees")]
 [ApiExplorerSettings(GroupName = "v1")]
 [Tags("employees")]
+
 public class EmployeesDeleteController(IEmployeeRepository employeeRepository) : EmployeesController(employeeRepository)
 {
     [HttpDelete("{id}")]

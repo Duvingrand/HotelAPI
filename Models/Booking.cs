@@ -37,8 +37,8 @@ public class Booking
     public DateTime StartDate { get; set; }
     [Column("end_date")]
     public DateTime? EndDate { get; set; }
-    [Column("total_cost")]
-    public double TotalCost { get; set; }
+
+
 
     public Booking(int roomId, int guestId, int employeeId, DateTime startDate, DateTime? endDate)
     {
@@ -47,6 +47,5 @@ public class Booking
         EmployeeId = employeeId;
         StartDate = startDate;
         EndDate = endDate;
-        TotalCost = Room.PricePerNight;
     }
 }

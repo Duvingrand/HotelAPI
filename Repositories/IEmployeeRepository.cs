@@ -14,4 +14,5 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Repositories;
     Task Update(Employee employee);
     Task Delete(int id);
     Task<bool> CheckExistence(int id);
+    Task<Employee?> GetByEmail(string email);
     }

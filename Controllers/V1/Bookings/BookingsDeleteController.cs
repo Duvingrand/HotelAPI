@@ -10,6 +10,7 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Controllers.V1.Bookings;
     [Route("api/v1/bookings")]
     [ApiExplorerSettings(GroupName = "v1")]
     [Tags("bookings")]
+    
  public class BookingsDeleteController(IBookingRepository bookingRepository) : BookingsController(bookingRepository)
 {
     [HttpDelete("{id}")]

@@ -40,6 +40,11 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Services
             }
         }
 
+        public async Task<Employee?> GetByEmail(string email)
+        {
+            return await _context.Employees.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
         public async Task<bool> CheckExistence(int id)
         {
             try
