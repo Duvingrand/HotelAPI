@@ -10,6 +10,7 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Models;
 public class Guest
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
     public int Id { get; set; }
     [Column("first_name")]
@@ -23,6 +24,16 @@ public class Guest
     [Column("phone_number")]
     public required string PhoneNumber { get; set; }
     [Column("birth_date")]
-    public string? BirthDate { get; set; }
+    public DateOnly? BirthDate { get; set; }
+
+    public Guest(string firstName, string lastName, string email, string identificationNumber, string phoneNumber, DateOnly? birthDate)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+        IdentificationNumber = identificationNumber;
+        PhoneNumber = phoneNumber;
+        BirthDate = birthDate;
+    }
 
 }
