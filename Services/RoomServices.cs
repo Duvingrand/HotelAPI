@@ -70,11 +70,6 @@ public class RoomServices : IRoomRepository
 
     public async Task Update(Room room)
     {
-        if (room == null)
-        {
-            throw new ArgumentNullException(nameof(room), "El vehículo no puede ser nulo.");
-        }
-
         try
         {
             _context.Entry(room).State = EntityState.Modified;
@@ -82,11 +77,11 @@ public class RoomServices : IRoomRepository
         }
         catch (DbUpdateException dbEx)
         {
-            throw new Exception("Error al actualizar el vehículo en la base de datos.", dbEx);
+            throw new Exception("Error  en la base de datos.", dbEx);
         }
         catch (Exception ex)
         {
-            throw new Exception("Ocurrió un error inesperado al actualizar el vehículo.", ex);
+            throw new Exception("Ocurrió un error inesperado.", ex);
         }
     }
 }

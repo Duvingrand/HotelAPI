@@ -14,15 +14,15 @@ public class Employee
     [Column("id")]
     public int Id { get; set; }
     [Column("first_name")]
-    public required string FirstName { get; set; }
+    public string FirstName { get; set; }
     [Column("last_name")]
-    public required string LastName { get; set; }
+    public string LastName { get; set; }
     [Column("email")]
-    public required string Email { get; set; }
+    public string Email { get; set; }
     [Column("identification_number")]
-    public required string IdentificationNumber { get; set; }
+    public string IdentificationNumber { get; set; }
     [Column("password")]
-    public required string Password { get; set; }
+    public string Password { get; set; }
 
     public Employee(string firstName, string lastName, string email, string identificationNumber, string password)
     {

@@ -9,20 +9,21 @@ namespace PruebaNET_BrayanFelipeRodriguezMosquera.Models;
 [Table("guests")]
 public class Guest
 {
+
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [Column("id")]
     public int Id { get; set; }
     [Column("first_name")]
-    public required string FirstName { get; set; }
+    public string FirstName { get; set; }
     [Column("last_name")]
-    public required string LastName { get; set; }
+    public string LastName { get; set; }
     [Column("email")]
-    public required string Email { get; set; }
+    public string Email { get; set; }
     [Column("identification_number")]
-    public required string IdentificationNumber { get; set; }
+    public string IdentificationNumber { get; set; }
     [Column("phone_number")]
-    public required string PhoneNumber { get; set; }
+    public string PhoneNumber { get; set; }
     [Column("birth_date")]
     public DateOnly? BirthDate { get; set; }
 
@@ -35,5 +36,4 @@ public class Guest
         PhoneNumber = phoneNumber;
         BirthDate = birthDate;
     }
-
 }

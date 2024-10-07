@@ -40,13 +40,13 @@ public class Booking
     [Column("total_cost")]
     public double TotalCost { get; set; }
 
-    public Booking(int roomId, int guestId, int employeeId, DateTime startDate, DateTime? endDate, double totalCost)
+    public Booking(int roomId, int guestId, int employeeId, DateTime startDate, DateTime? endDate)
     {
         RoomId = roomId;
         GuestId = guestId;
         EmployeeId = employeeId;
         StartDate = startDate;
         EndDate = endDate;
-        TotalCost = totalCost;
+        TotalCost = Room.PricePerNight;
     }
 }

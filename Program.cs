@@ -22,6 +22,9 @@ builder.Services.AddDbContext<MyDBContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddScoped<IRoomTypeRepository,RoomTypeServices>();
 builder.Services.AddScoped<IRoomRepository,RoomServices>();
+builder.Services.AddScoped<IGuestRepository,GuestServices>();
+builder.Services.AddScoped<IEmployeeRepository,EmployeeServices>();
+builder.Services.AddScoped<IBookingRepository,BookingServices>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
